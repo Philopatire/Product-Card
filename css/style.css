@@ -1,0 +1,111 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(30, 38%, 92%);
+  margin: 0;
+  margin-bottom: 80px;
+}
+.product-card {
+  max-width: 755px;
+  --dark-cyan: hsl(158, 36%, 37%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+}
+
+.product-card .product-image {
+  background-image: url(../images/image-product-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 50%;
+  display: inline;
+}
+.product-card .content {
+  padding: 40px 30px;
+}
+
+.product-card .content .product-type {
+  color: var(--dark-grayish-blue);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+.product-card .content .product-name {
+  font-family: "Fraunces", serif;
+  color: var(--very-dark-blue);
+  font-size: 2.3rem;
+}
+.product-card .content .product-description {
+  color: var(--dark-grayish-blue);
+  line-height: 1.7;
+}
+.product-card .content .product-price {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.product-card .content .product-price .current {
+  font-size: 2.3rem;
+  font-family: "Fraunces", serif;
+  color: var(--dark-cyan);
+}
+.product-card .content .product-price .old {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
+.product-card .content .buy-btn {
+  background-color: var(--dark-cyan);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  border: navajowhite;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 300ms;
+}
+.product-card .content .buy-btn:hover {
+  background-color: hsl(156deg 42% 18%);
+}
+.product-card .content .buy-btn img {
+  margin-right: 5px;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 575px) {
+  .product-card {
+    flex-direction: column;
+  }
+  .product-card .product-image {
+    background-image: url(../images/image-product-mobile.jpg);
+    min-width: 100%;
+    height: 250px;
+  }
+  .product-card .content .product-name {
+    font-size: 2rem;
+  }
+  .product-card .product-price {
+    margin-bottom: 20px !important;
+  }
+}
